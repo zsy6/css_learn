@@ -8,7 +8,7 @@
         :root{
             font-size: 20px;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: thistle;
+            background-color: #FFFFFF;
         }
 
         body{
@@ -21,6 +21,10 @@
         /* 用flex的方式将内容上下左右居中 */
         /* perspective: 800px;
          这个效果出不来 ？*/
+
+         .container{
+            perspective: 20em;
+         }
 
         .container>div{
             display: block;
@@ -44,29 +48,43 @@
             text-align: center;
             transition: .2s transform ease-in-out;
             /* 动画的过渡效果 */
+            line-height: 6.3rem;
+            /* 使字体更垂直居中 */
         }
+            /* css font baseline */
+            /* font-size和其视觉高度的关系 line-height/vertical-align/baseline*/
+
+        .container>div>.cls2{
+            font-size: 4.5rem;
+        }
+
 
         .container:hover>div>span{
             transform: translateY(-100%);
             /* 将span向上移动4rem */
+            /* 滚动效果 */
 
         }
         /* 游标移上去的时候，调整span的样式 */
         
         /* 通过:nth-child()伪类选择器为四个div增加背景颜色 */
         .container > div:nth-child(1){
-            background-color:rgb(70, 130, 180, 0.6);
-            /* transform: rotatex(10deg); */
+            background-color:rgba(180, 70, 70, 0.6);
+            transform: rotatex(30deg);
         }
         .container > div:nth-child(2){
-            background-color:rgb(134, 176, 211, 0.6);
-            /* transform: rotate(-30deg); */
+            background-color:rgba(211, 134, 134, 0.6);
+            transform:translateY(-.6rem) rotatex(-30deg);
         }
+        /* translatey和rotatex属性都要写在transform里 */
+
         .container > div:nth-child(3){
-            background-color:rgb(70, 130, 180, 0.6);
+            background-color:rgba(180, 70, 70, 0.6);
+            transform: translatey(-1.2rem) rotatex(30deg);
         }
         .container > div:nth-child(4){
-            background-color:rgb(134, 176, 211, 0.6);
+            background-color:rgba(211, 134, 134, 0.6);
+            transform:translateY(-1.8rem) rotatex(-30deg);
         }
     </style>
 </head>
@@ -74,20 +92,20 @@
      <body>
          <div class="container">
              <div>
-                 <span>HAPPY</span>
-                 <span>1</span>
+                 <span class="cls1">HAPPY</span>
+                 <span class="cls2">新</span>
              </div>
              <div>
-                <span>NEW</span>
-                <span>2</span>
+                <span class="cls1">NEW</span>
+                <span class="cls2">年</span>
             </div>
             <div>
-                <span>YEAR</span>
-                <span>3</span>
+                <span class="cls1">YEAR</span>
+                <span class="cls2">快</span>
             </div>
             <div>
-                <span>2022</span>
-                <span>4</span>
+                <span class="cls1">2022</span>
+                <span class="cls2">乐</span>
             </div>
          </div>
      </body>
