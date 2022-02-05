@@ -2,13 +2,46 @@
 <head>
     <meta charset="UTF-8">
     <style type="text/css">
+        /* 属性选择器和标签的属性名和属性值有关 */
+        /* 通过标签的属性名和属性值匹配元素 */
+        /* attribute 属性 */
 
+        
+        /* [attr]{...} */
+        /* 匹配具有attr属性的标签，不考虑属性值 */
+        [align]{
+            text-decoration: underline;
+        }
+        h1[align]{
+            font-style: italic;
+        }
+        /* 这样写就只会匹配h1标签中，有align属性的元素 */
+
+
+        /* h1[attr="val"]{...} */
+        /* 匹配attr属性值等于val的标签，属性值一般加引号 */
+
+         /* [attr^="val"]{...} */
+        /* 匹配attr属性值以val开头的元素 */
+
+        /* [attr$="val"]{...} */
+        /* 匹配attr属性值以val结尾的元素 */
+
+        /* [attr*="val"]{...} */
+        /* 匹配attr属性值包含val的元素 */
+        [color*="l"]{
+            font-size: 35px;
+        }
 
     </style>
 
 </head>
 <html>
     <body>
-        
+        <p align="center">除夕快乐</p>
+        <h1 align="center">除夕快乐</h1>
+        <p color="skyblue">除夕快乐</p>
+        <p color="purple">除夕快乐</p>
+
     </body>
 </html>

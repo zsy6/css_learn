@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+
+            .box{
+                width: 100px;
+                height: 66px;
+                background-color: royalblue;
+                padding-left: 100px;
+                /* 盒子里内容到左边框线的距离，左内填充 */
+
+            }
+            /* 元素需要有内容或者宽高才能设置背景颜色 */
+            /* backgroud-color */
+
+            .box2{
+                width: 500px;
+                height: 300px;
+                background-image: url(./images/pic2.png);
+            }
+            /* background-image 给元素设置背景图片 */
+            /* 要用url()的形式 也需要有宽高  背景图片默认是平铺的*/ 
+
+            .box3{
+                width: 200px;
+                height: 200px;
+                border: 2px solid royalblue;
+                margin: auto;
+                background-image: url(./images/pic3.png);
+                background-repeat: no-repeat; 
+                background-position: right 10%;
+            }
+            /* background-repeat  repeat repeat-x repeat-y no-repeat */
+            /* 背景图片平铺方式，默认为  background-repeat: repeat; */
+
+            
+            /*  background-position */
+            /* 用于设置背景图片的位置 水平、垂直 */
+            /* 英文单词、固定值、百分比 */
+            /* 三种方式可以混合使用 */
+
+            /* 英文单词   background-position: right top; */
+            /* left、center、right / top、center、bottom */
+
+            /* 固定值  background-position: 100px 200px; */
+            /* 离左边100px 上面200px */
+
+            /* 百分比 background-position: 20% 50%; */
+             
+            /* 背景图片是否固定 （用得比较少) */
+            /* background-attachment */
+            /* fixed scroll */
+
+            .box4{
+                width: 300px;
+                height: 300px;
+                border: 2px solid purple;
+                margin: auto;
+                background: yellowgreen url(./images/pic2.png) repeat-y;
+
+            }
+            /* 简写属性 */
+            /* 值的个数不定 顺序也不定 每个值之前用空格分隔 */
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            abcd
+        </div>
+        
+        <div class="box2"></div>
+        <div class="box3"></div>
+
+        <div class="box4"></div>
+
+        <img src="./images/pic1.jpg" />
+        <!-- 这也是插入图片，但是不是背景图片，只是在页面放入一张图片 -->
+
+    </body>
+</html>

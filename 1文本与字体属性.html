@@ -1,110 +1,112 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>
-        文本与字体属性
-    </title>
-    <style type="text/css">
-        .file1{
-            font-style: italic; 
-            /* 将文本设置为斜体 */
-            font-weight: bold;
-            /* 设置加粗效果 */
-            font-size: 36px;
-            /* 设置文本大小 */
-        }
-        i{
-            font-style: normal;
-            /* 将斜体等字体恢复正常 */
-            font-family: "宋体","黑体","微软雅黑";
-            /* 设置字体，可以设置多个，以第一个有的为准（生效） */
-            /* 字体能不能解析是根据用户电脑里的字体文件决定的，没有该文件就会显示为宋体 */
-            /* 一般很特殊的字体，网站上都是用图片展示的 */
-        }
-        b{
-            font-weight: normal;
-            /* 设置回正常效果（取消加粗之类） */
-        }
-        .test1{
-            font:italic bold 24px "楷体" ;
-            /* 能同时给文本设置：斜体、加粗、大小、字体*/
-            /* 每个值之间要用空格，且要按以上顺序 */
-        }
-        h2{
-            color: skyblue;
-            font-size: 36px;
-            font-family:Arial, Helvetica, sans-serif; 
-            /* 苹果电脑的字体名称有点奇怪 */
-
-        }
-        .p2{
-            color:slateblue;
-        }
-        .first{
-            font-size: 30px;
-            color: springgreen;
-            font-weight: bold;
-        }
-        .p3{
-            text-align: center;
-            /* 设置文本水平对齐方向 center/left/right 默认center */
-            text-decoration: line-through;
-            /* 文本修饰线  none(去掉文本修饰线，把标签的文本修饰线去掉)、
-            underline、overline、linethrought(删除线)*/
-        }
-        .sec{
-            text-decoration: none;
-            /* 发现此处去掉文本修饰线不生效 */
-            color: lightcoral;
-        }
-        .p4{
-            text-transform: capitalize;
-            /* capitalize(将英文首字母设置为大写)
-            capitalize是每一个单词的首字母
-            uppercase（将小写转换为大写）；
-            lowercase（将大写转为小写） */
-            text-indent: 50px;
-            /* 设置首行缩进，单位：px/em ；一个em就表示一个汉字的位置，可以为负值 */
-            word-spacing: 15px;
-            /* 设置单词间距  px*/
-        }
-        .third{
-            letter-spacing: 20px;
-            /* 设置字符间距  px*/
-        }
-        div{
-            border:3px solid yellow;
-            /*  <line-width> || <line-style> || <color> */
-            height: 40px;
-            width: 500px;
-            line-height: 40px;
-            /* 设置行高 和边框一样高 就能有垂直方向字体位置居中的效果 */
-            background-color: bisque;
-            /* 尺寸样式属性：背景颜色 */
-        }
-    </style>
-</head>
-
 <html>
-   <body>
-       <p>
-        制品<span class="file1">文件</span>：需要填写包含文件名的产物文件所在路径，
-        <i>必须匹配到具体的文件</i>；此组件支持正则匹配一个或多个文件
-        <b>是否打包成zip</b>：默认关闭开关，<span class="test1">将匹配到的文件单独上传</span>；
-        如果将开关打开，则将匹配到的文件和文件夹一起打成zip压缩包上传
-        制品包名：打包成zip时，需要用户自定义zip包名
-       </p>
-       <p>
-        <h2>中国共产党第十九次全国代表大会</h2>
-        <!-- p*3 然后按下回车就可以出来三个tab标签 -->
-        <p class="p1">把习近平新时代中国特色社会主义思想确立为党必须长期坚持的指导思想并庄严地写入党章，</p>
-        <p class="p2"><span class="first">实现</span>了党的指导思想的与时俱进。</p>
-        <p class="p3">这是一个历史性<span class="sec">决策</span>和历史性贡献，</p> 
-        <p class="p4">the <span class="third">show</span> must go on
-        郑重地把习近平新时代中国特色社会主义思想载入宪法，实现了国家指导思想的与时俱进，
-        反映了全国各族人民共同意志和全社会共同意愿。习近平新时代中国特色社会主义思想，</p>
-        是新时代中国共产党的思想旗帜，是国家政治生活和社会生活的根本指针，
-        <p class="p5">是当代<div>中国马克思主义</div>、二十一世纪马克思主义。</p>
-       </p>
-   </body>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            文本与字体属性
+        </title>
+        <style type="text/css">
+            .file1{
+                font-style: italic; 
+                /* 将文本设置为斜体 */
+                font-weight: bold;
+                /* 设置加粗效果 */
+                font-size: 36px;
+                /* 设置文本大小 */
+            }
+            i{
+                font-style: normal;
+                /* 将斜体等字体恢复正常 */
+                font-family: "宋体","黑体","微软雅黑";
+                /* 设置字体，可以设置多个，以第一个有的为准（生效） */
+                /* 字体能不能解析是根据用户电脑里的字体文件决定的，没有该文件就会显示为宋体 */
+                /* 一般很特殊的字体，网站上都是用图片展示的 */
+            }
+            b{
+                font-weight: normal;
+                /* 设置回正常效果（取消加粗之类） */
+            }
+            .test1{
+                font:italic bold 24px "楷体" ;
+                /* 能同时给文本设置：斜体、加粗、大小、字体*/
+                /* 每个值之间要用空格，且要按以上顺序 */
+            }
+            h2{
+                color: skyblue;
+                font-size: 36px;
+                font-family:Arial, Helvetica, sans-serif; 
+                /* 苹果电脑的字体名称有点奇怪 */
+
+            }
+            /* color可以用三种形式：#ff0000/red/rgb(3,5,8) */
+            /* 十进制的颜色表示方式在浏览器中不会有兼容问题 */
+            .p2{
+                color:slateblue;
+            }
+            .first{
+                font-size: 30px;
+                color: springgreen;
+                font-weight: bold;
+            }
+            .p3{
+                text-align: center;
+                /* 设置文本水平对齐方向 center/left/right 默认center */
+                text-decoration: line-through;
+                /* 文本修饰线  none(去掉文本修饰线，把标签的文本修饰线去掉)、
+                underline、overline、linethrought(删除线)*/
+            }
+            .sec{
+                text-decoration: none;
+                /* 发现此处去掉文本修饰线不生效 */
+                color: lightcoral;
+            }
+            .p4{
+                text-transform: capitalize;
+                /* capitalize(将英文首字母设置为大写)
+                capitalize是每一个单词的首字母
+                uppercase（将小写转换为大写）；
+                lowercase（将大写转为小写） */
+                text-indent: 50px;
+                /* 设置首行缩进，单位：px/em ；一个em就表示一个汉字的位置，可以为负值 */
+                word-spacing: 15px;
+                /* 设置单词间距  px*/
+            }
+            .third{
+                letter-spacing: 20px;
+                /* 设置字符间距  px*/
+            }
+            div{
+                border:3px solid yellow;
+                /*  <line-width> || <line-style> || <color> */
+                height: 40px;
+                width: 500px;
+                line-height: 40px;
+                /* 设置行高 和边框一样高 就能有垂直方向字体位置居中的效果 */
+                background-color: bisque;
+                /* 尺寸样式属性：背景颜色 */
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>
+            制品<span class="file1">文件</span>：需要填写包含文件名的产物文件所在路径，
+            <i>必须匹配到具体的文件</i>；此组件支持正则匹配一个或多个文件
+            <b>是否打包成zip</b>：默认关闭开关，<span class="test1">将匹配到的文件单独上传</span>；
+            如果将开关打开，则将匹配到的文件和文件夹一起打成zip压缩包上传
+            制品包名：打包成zip时，需要用户自定义zip包名
+        </p>
+        <p>
+            <h2>中国共产党第十九次全国代表大会</h2>
+            <!-- p*3 然后按下回车就可以出来三个tab标签 -->
+            <p class="p1">把习近平新时代中国特色社会主义思想确立为党必须长期坚持的指导思想并庄严地写入党章，</p>
+            <p class="p2"><span class="first">实现</span>了党的指导思想的与时俱进。</p>
+            <p class="p3">这是一个历史性<span class="sec">决策</span>和历史性贡献，</p> 
+            <p class="p4">the <span class="third">show</span> must go on
+            郑重地把习近平新时代中国特色社会主义思想载入宪法，实现了国家指导思想的与时俱进，
+            反映了全国各族人民共同意志和全社会共同意愿。习近平新时代中国特色社会主义思想，</p>
+            是新时代中国共产党的思想旗帜，是国家政治生活和社会生活的根本指针，
+            <p class="p5">是当代<div>中国马克思主义</div>、二十一世纪马克思主义。</p>
+        </p>
+    </body>
 </html>

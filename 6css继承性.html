@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>继承性</title>
+        <style type="text/css">
+            body{
+                color: blue;
+            }
+            /* 外层元素身上的样式会被内层所继承 */
+            h2{
+                color: blue;
+                font-style: italic;
+            }
+            /* 当内层元素和外层元素的样式相同时，外层的样式会被内层所覆盖 */
+
+            div{
+                color: red;
+                border: 1px solid purple;
+                font-size: 50px;
+            }
+
+            /* 是不是所有的样式都能被继承? */
+            /* 并不是所有样式都能被继承，只有文本和字体样式可以被继承，其他都不行 */
+            /* 在实际工作中，往往会给body标签设置字体大小和颜色，因为body时最外层的元素，内层的元素会继承其样式 */
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2>
+                这是h2标签的内容
+            </h2>
+            <p>
+                这是p标签的内容
+            </p>
+        </div>
+
+
+    </body>
+</html>

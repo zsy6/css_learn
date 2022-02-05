@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>标准文档流与浮动</title>
+        <style type="text/css">
+
+            /* body标签有默认的margin值，必要时可以设置为0px */
+            /* 可以用通用选择器来去除html中的内填充和外边距，清楚后不会影响到排版和布局 */
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            /* 重要！ */
+
+            .box{
+                width: 600px;
+                border: 1px solid royalblue;
+                margin: auto;
+            }
+            .div1{
+                width: 100px;
+                height: 100px;
+                background-color: skyblue;
+                float: right;
+                /* 给这个元素增加浮动属性 */
+            }
+            .div2{
+                width: 100px;
+                height: 100px;
+                background-color: seagreen;
+            }
+            .div3{
+                width: 100px;
+                height: 100px;
+                background-color: silver;
+            }
+
+
+            .box1{
+                width: 600px;
+                border: 1px solid purple;
+                margin: auto;
+            }
+            .cls2{
+                width: 100px;
+                height: 100px;
+                background-color: sandybrown;
+                float: left;
+                /* 设置为浮动，可以给其设置宽度和高度 */
+            }
+            /* 发现行内元素的浮动会 */
+
+            .cls1{
+                width: 100px;
+                height: 100px;
+                background-color: rgb(126, 183, 230);
+                float: left;
+                /* 设置为浮动，可以给其设置宽度和高度 */
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        <!-- 标准文档流的概念 -->
+        <!-- 使用html来写网页时，要遵循从上到下、从左到右的规则 -->
+
+        <!-- 1.空白折叠现象 -->
+        <!-- 内容在代码中换行写时，会出现空白 -->
+        <!-- 将元素放在同一行，紧密相接，就不会出现空白了 -->
+
+        <!-- 2.高矮不齐，底部对齐 -->
+
+        <!-- 浮动 -->
+        <!-- 需求：实现让多个元素排在同一行（行内元素的特性），并给这些元素设置宽度、高度（块级元素的特性） -->
+        <!-- 标准文档流中的元素只有行内元素和块级元素，要让元素同时有这两种元素的特点，只能让其脱离标准文档流 -->
+        <!-- float属性  值可以为left或right -->
+        <!-- 浮动元素脱离标准文档流，不占用空间，且层级比较高，会把标准文档流的元素遮住 -->
+        <!-- 浮动元素遇到父元素的边框会停止浮动 -->
+        <!-- 浮动元素遇到上一个浮动元素会停止浮动 -->
+        <!-- 浮动元素浮动之后，父元素不再会包裹住浮动元素 -->
+        <!-- 行内元素浮动后，会变成块级元素 -->
+
+        <!-- 主要是为了让多个块级元素排在同一行 -->
+        
+        <div class="box">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div3"></div>
+        </div>
+
+        <br />
+        <div class="box1">
+            <span class="cls1">文本1</span>
+            <span class="cls2">文本2</span>
+        </div>
+
+    </body>
+</html>
