@@ -4,14 +4,74 @@
         <meta charset="utf-8">
         <title>清除浮动</title>
         <style type="text/css">
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
             /* 为什么要清除浮动？ */
             /* 因为浮动元素会影响到下面的元素的排版布局，并且浮动的元素没有被其父元素包裹着 */
+            /* 需要清除浮动，就不会影响浮动元素下面的排版布局，浮动元素的父元素会将浮动元素从视觉上包裹着 */
+            .box{
+                width: 600px;
+                border: 1px solid royalblue;
+                margin: auto;
+                /* overflow: hidden; */
+                /* 第三种清除浮动的方法 */
+            }
+            .box div[class^="div"]{
+                width: 100px;
+                height: 100px;
+            }
+            .div1{
+                background-color: salmon;
+                float:left;
+            }
+            .div2{
+                background-color: greenyellow;
+                float: left;
+            }
+            .div3{
+                background-color: grey;
+                float: left;
+            }
+            .special_div4{
+                width: 100px;
+                height: 200px;
+                background-color: hotpink;
+                float: right;
+            }
+
+            /* 清除浮动的方法 */
+
+            /* 1、给浮动元素的父元素设置固定的高度 */
+            /* 不建议使用，因为一个元素的高度一般情况下不是手动设置的 */
+
+            /* 2、使用清除浮动的样式属性 clear */
+            /* clear:left;   clear:right;  clear: both; */
+            /* clear一般用在最后一个浮动元素的下面，在最后一个浮动元素下面新建一个空白的div,里面不放置内容，只用来清除浮动 */
+            .clear{
+                clear: left;
+            }
+
+            /* 3、使用overflow:hidden这个属性来清除浮动 */
+            /* overflow是一个属性，hidden原意是将移除的部分进行隐藏，可用于清除浮动 */
+            /* 要给父元素设置 */
+            /* 一般用来清除列表的浮动 给li的父元素ul设置一个overflow：hidden;的属性 */
 
         </style>
 
     </head>
     <body>
-        
+       <div class="box">
+           <div class="div1"></div>
+           <div class="div2"></div>
+           <div class="div3"></div>
+           <div class="special_div4"></div>
+           <div class="clear"></div>
+       </div>
+       <h2>
+           浮动与清除浮动
+       </h2>
 
     </body>
 </html>

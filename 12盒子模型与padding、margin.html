@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            box model
+        </title>
+        <style type="text/css">
+            /* 盒子：内容+填充物+纸盒子 */
+            /* css盒子的组成部分：内容content+内填充padding+边框border+外边距margin */
+            /* 一个盒子的主要属性：盒子内容的宽度width/盒子内容的高度height/
+            内填充 盒子里面的内容距离边框的距离padding/外边框 border/盒子与盒子之间的距离 margin */
+
+            /* 通过浮动可以把盒子排在一行 */
+
+            /* 如何计算盒子的总宽度？ */
+            /* 等于盒子里面内容的宽度width+padding+border */
+            /* 一个盒子的高度一般不用设置，会由其内容决定 */
+
+            .box{
+                width: 100px;
+                height: 100px;
+                /* 这两个都是内容的宽、高 */
+                padding: 20px 100px 3px 20px;
+                /* 简写属性 padding 按上右下左的顺时针方向 */
+                /* padding: 20px; 意为上下左右都为20px */
+                /* padding:10px 20px; 上下为10px 左右为20px  */
+                /* padding:10px 20px 30px; 上为10px 左右为20px 下为30px */
+
+                border: 3px solid royalblue;
+                overflow: hidden;
+            }
+
+            .box1{
+                width: 200px;
+                height: 200px;
+                border:2px solid hotpink;
+                padding-top: 5px;
+                padding-bottom: 10px;
+                padding-left: 30px;
+                padding-right: 3px;
+                /* 这种描述方法叫小属性 */
+            }
+
+            .box2{
+                width: 200px;
+                height: 200px;
+                border:2px solid rgb(42, 179, 144);
+                margin: 100px 30px 200px；
+                /* margin的简写属性规则和padding一样 */
+            }
+
+        </style>
+
+
+    </head>
+    <body>
+        <div class="box">
+            /* 如何计算盒子的总宽度？ */
+            /* 等于盒子里面内容的宽度width+padding+border */
+            /* 一个盒子的高度一般不用设置，会由其内容决定 */
+        </div>
+
+        <div class="box1">
+            padding是内填充的意思，有四个方向
+        </div>
+
+        <div class="box2">
+            margin是外边距，即为盒子与盒子之间的距离，也有四个方向
+        </div>
+
+
+
+
+    </body>
+</html>
