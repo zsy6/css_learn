@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            固定定位
+        </title>
+        <style type="text/css">
+
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            /* position：fixed  relative  absolute  固定定位 相对定位  绝对定位 */
+            /* 使用定位时，要配合定位的坐标使用 */
+            /* left right top bottom */
+
+            
+            p{
+                width: 100px;
+                height: 100px;
+                background-color: blueviolet;
+                position: fixed;
+            }
+            /* position:fixed; 相对于浏览器窗口定位，不管页面如何滚动，固定定位元素显示的位置不会改变 */
+            /* 固定定位脱离了标准文档流，层级比标准文档流高，所以其会盖住标准文档流的元素，且其不再占用空间 */
+            
+            /* 案例 */
+            /* 使用固定定位实现返回顶部按钮悬浮 */
+            .back_top{
+                display: block;
+                width: 100px;
+                height: 50px;
+                background-color: palevioletred;
+                text-align: center;
+                line-height: 50px;
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                /* 固定定位 */
+                position: fixed;
+                right: 30px;
+                top: 200px;
+                text-decoration: underline;
+            }
+
+            /* 使用固定定位实现顶部导航栏 */
+            .nav{
+                width: 100%;
+                height: 60px;
+                background-color: sienna;
+                position: fixed;
+                left: 0px;
+                top: 0px;
+            }
+            .nav>.inner{
+                width: 960px;
+                height: 60px;
+                margin: auto;
+                background-color:rgb(63, 92, 85) ;
+            }
+            ul{
+                list-style: none;
+
+            }
+            ul>li{
+                float: left;
+                width: 120px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+            }
+            ul>li>a{
+                display: block;
+                width: 120px;
+                height: 60px;
+            }
+            ul>li>a:link,ul>li>a:visited{
+                text-decoration: none;
+                color: yellow;
+                font-size: 26px;
+                font-weight: bold;
+            }
+            ul>li>a:hover{
+                color: yellowgreen;
+                text-decoration: underline;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <p> </p>
+        <a class="back_top" href="#">返回顶部</a>
+        <img src="./images/pic-big.png" />
+
+        <div class="nav">
+            <div class="inner">
+                <ul>
+                    <li><a href="#">导航</a></li>
+                    <li><a href="#">导航</a></li>
+                    <li><a href="#">导航</a></li>
+                    <li><a href="#">导航</a></li>
+                    <li><a href="#">导航</a></li>
+                    <li><a href="#">导航</a></li>
+                    <li><a href="#">导航</a></li>
+                    <li><a href="#">导航</a></li>
+                </ul>
+            </div>
+        </div>
+        <h2>下<u>下划线</u>划线测试</h2>
+        <!-- 发现下划线会嵌进字体很多 -->
+    </body>
+</html>
