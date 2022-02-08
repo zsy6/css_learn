@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            相对定位
+        </title>
+        <style type="text/css">
+            /* 相对定位是相对于“原来的自己”进行定位 */
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .box{
+                width: 600px;
+                border: 2px dashed blue;
+                margin: 100px auto;
+                padding-left: 40px;
+            }
+            .box div{
+                width: 100px;
+                height: 100px;
+            }
+            .div1{
+                background-color: tomato;   
+            }
+            .div2{
+                background-color: thistle;
+                position: relative;
+                left: 100px;
+            }
+            /* 1 相对定位元素没有脱离标准文档流 */
+            /* 2 相对定位元素没有设置定位坐标，就会在原来的位置 */
+            /* 3 相对定位元素设置了定位坐标，会在原位置留下一个空白元素 */
+            /* 4 相对定位元素会将标准文档流中的元素压盖住 */
+            /* 5 相对定位元素的定位值可以为负数 */
+            /* 相对定位的逻辑是：相对原来的位置，原来在现在的哪个方向多少距离 */
+            /* 因为相对定位元素会在原位置留下空白元素，很少单独使用，会配合绝对定位元素使用 */
+
+            .div3{
+                background-color: violet;
+            }
+            
+            input[type="text"]{
+                font-size: 36px;
+                border: 1px solid blue;
+            }
+            /* 为了将输入框和按钮对齐 */
+            input[type="button"]{
+                position: relative;
+                top:6px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="box">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div3"></div>
+        </div>
+        <br />
+        <input type="text"><input type="button" value="检测用户名">
+    </body>
+</html>
