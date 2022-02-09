@@ -6,19 +6,42 @@
             绝对定位应用
         </title>
         <style type="text/css">
-            .box{
-                width: 200px;
-                height: 200px;
-                border: 2px dashed blue;
+            *{
+                padding: 0px;
+                margin: 0px;
             }
-           
-
+            img{
+                display: block;
+            }
+            .box{
+                width: 717px;
+                height: 326px;
+                border: 2px solid royalblue;
+                margin: 100px auto;
+                position: relative;
+            }
+            span{
+                position: absolute;
+                top: -10px;
+                left: 20px;
+            }
+            /* 子元素绝对定位，父元素相对定位 */
+          
         </style>
 
     </head>
     <body>
         <div class="box">
+            <span><img src="./images/pic2.png" /></span>
+            <div>
+                <img src="./images/pic4.png" />
+            </div>
+            <!-- 发现div中的img下有4px空白距离 -->
+            <!-- img是行内元素，默认和父元素的基线对齐 -->
+            <!-- 简单的解决方法：给div设置font-size:0; 给img设置display:block; -->
 
+            <!-- https://blog.csdn.net/dwjdj/article/details/106460509 -->
+            <!-- https://www.cnblogs.com/oxspirt/p/6598840.html -->
         </div>
     </body>
 </html>
