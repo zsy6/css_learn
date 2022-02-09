@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>标签内可以携带多个类名</title>
+        <style type="text/css">
+            /* 指的是class可以有多个属性值 */
+            /* 每个属性值之间用空格分隔 class="class1 class2" */
+
+            /* 1.减少css代码量 */
+            /* 2.多个类名的样式会叠加到当前元素上 */
+
+            .div1{
+                font-weight: bold;
+            }
+            .div2{
+                color: royalblue;
+            }
+            /* 如果标签内的多个类名设置同一个样式，会出现样式冲突 */
+            /* 冲突时会以css代码为标准，写在下面的样式生效 */
+
+
+        </style>
+    </head>
+    <body>
+        <!--  div.div${标签的内容}*3  回车 就会出现div1、2、3 -->
+        <div class="div1">标签的内容</div>
+        <div class="div2">标签的内容</div>
+        <div class="div1 div2">标签的内容</div>
+
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            margin的塌陷与居中
+        </title>
+        <style type="text/css">
+            /* 1、在标准文档流中，竖直方向的margin值不会叠加，它会取比较大的值 */
+            /* 2、横向没有margin的塌陷现象 */
+            /* 3、浮动元素也没有margin的塌陷现象(竖直和横向都没有) */
+
+            .box{
+                width: 100px;
+                height: 100px;
+                /* 这两个都是内容的宽、高 */
+                padding: 20px 100px 3px 20px;
+                border: 3px solid royalblue;
+                overflow: hidden;
+                margin-bottom: 50px;
+                margin-right: 50px;
+                float: left;
+            }
+            
+            .box1{
+                width: 100px;
+                height: 100px;
+                border: 4px solid burlywood;
+                float: left;
+            }
+
+            .box_margin{
+                width: 200px;
+                height: 200px;
+                border:2px solid rgb(42, 179, 144);
+                /* margin的简写属性规则和padding一样 */
+                margin-top: 100px;
+                
+            }
+
+            .clear{
+                clear: both;
+            }
+
+            .box2{
+                width: 100px;
+                height: 66.6px;
+                background-color: cadetblue;
+                margin:100px auto;
+                /* 上下为100px 左右水平居中 */
+            }
+            /* 使用margin: auto;时，盒子会水平居中 */
+
+            /* 1 */
+            /* 使用margin进行水平居中时，必须是块元素，要有固定的宽度，行内元素不能实现居中 */
+            /* 如果块元素没有设置固定的宽度，这个元素就会占据其父元素100%的宽度 */
+
+            /* 2 */
+            /* 只有标准文档流中的盒子才能用margin实现水平居中,浮动元素不能用margin：auto; 来居中 */
+
+            /* 3 */
+            /* 文本的水平居中用text-align这个属性来实现： text-align:center; */
+
+
+        </style>
+
+
+    </head>
+    <body>
+        <div class="box">
+            /* 如何计算盒子的总宽度？ */
+            /* 等于盒子里面内容的宽度width+padding+border */
+            /* 一个盒子的高度一般不用设置，会由其内容决定 */
+        </div>
+        <div class="box1"></div>
+
+        <div class="clear"></div>
+        <div class="box_margin">
+            margin是外边距，即为盒子与盒子之间的距离，也有四个方向
+        </div>
+
+        <div class="box2"></div>
+
+    </body>
+</html>

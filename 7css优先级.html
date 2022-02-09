@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>优先级</title>
+        <style type="text/css">
+          div{
+              color: purple;
+          }
+          .cls1{
+              color: royalblue;
+          }
+          /* 会以.cls1设置的为准，不论其写的先后顺序 */
+
+
+          div h2{
+              text-decoration: underline;
+          }
+          .cls1 h2{
+              text-decoration: line-through;
+          }
+          #id1 h2{
+              text-decoration: overline;
+          }
+          /* 多个选择器之间的优先级：一般而言，选择器指向越准确，优先级越高 */
+          /* 标签选择器 1  类选择器 10  ID选择器 100  行内样式 1000 */
+
+          /* 行内样式>id选择器>类选择器>标签选择器 */
+
+          /* !important 属性 */
+          /* 用来提升属性的权重，其权重值无穷大 */
+          .cls1 p{
+              text-decoration: line-through !important;
+          }
+          #id1 p{
+              text-decoration: overline;
+          }
+
+          /* 使用important属性的语法格式 属性: 值 !important; */
+          /* !important 提升的是属性的权重，不是选择器的权重 */
+          /* !important不能提升继承过来的权重，即内层元素不会因为外层用了important而使用外层的样式 */
+
+        </style>
+    </head>
+    <body>
+        <div class="cls1" id="id1">
+            <h2>
+                这是h2标签的内容
+            </h2>
+            <p>
+                这是p标签的内容
+            </p>
+        </div>
+
+
+    </body>
+</html>

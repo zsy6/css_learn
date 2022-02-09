@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            display属性
+        </title>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            
+
+            .box{
+                width: 200px;
+                height: 200px;
+                border: 2px dashed blue;
+            }
+            /* display 显示 */
+            /* 用来进行行内元素与块级元素的相互转换，将隐藏的元素显示/将显示的元素隐藏 */
+            /* inline block none */
+
+            .span1{
+                display: block;
+                /* display: block;可以将行内元素转换为块级元素 */
+                width: 100px;
+                height: 100px;
+                background-color: cornsilk;
+            }
+            h2{
+                width: 200px;
+                height: 200px;
+                border: 2px solid blue;
+                display: inline;
+                /* display: inline;是将一个块级元素转换为行内元素 */
+                /* 这样宽高就失效了 */
+            }
+
+            /* 在java Script使用 */
+            /* 将显示的元素进行隐藏：display: none; */
+            /* 将隐藏的元素显示：display: block; */
+
+            ul{
+                list-style-type: none;
+            }
+            .nav{
+                width: 960px;
+                height: 50px;
+                margin: 100px auto;
+            }
+            ul>li{
+                float: left;
+                width: 120px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                background: url(./images/pic1.jpg);
+            }
+
+            ul>li>a{
+                /* 为了让鼠标hover时，整个块的背景都会变 */
+                display: block;
+                width: 120px;
+                height: 50px;
+            }
+
+
+            ul>li>a:link,ul>li>a:visited{
+                text-decoration: none;
+                color: yellow;
+            }
+            ul>li>a:hover{
+                color: black;
+                background-image: url(./images/pic2.png); 
+                /* 仅有a标签的字那里会变背景，因为a是行内元素，要让a变为块元素，然后设置一个宽高  */
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="box">
+            <span class="span1">行内元素1</span>
+            <span class="span1">行内元素2</span>
+        </div>
+        <h2>块级元素1</h2>
+        <h2>块级元素2</h2>
+
+        <div class="nav">
+            <ul>
+                <li><a href="#">网站栏目</a></li>
+                <li><a href="#">网站栏目</a></li>
+                <li><a href="#">网站栏目</a></li>
+                <li><a href="#">网站栏目</a></li>
+                <li><a href="#">网站栏目</a></li>
+                <li><a href="#">网站栏目</a></li>
+                <li><a href="#">网站栏目</a></li>
+                <li><a href="#">网站栏目</a></li>
+            </ul>
+        </div>
+
+    </body>
+</html>

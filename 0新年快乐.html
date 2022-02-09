@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        新年快乐
+    </title>
+    <style type="text/css">
+        :root{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* perspective: 6em; */
+        }
+        /* 用flex的方式将内容上下左右居中 */
+        /* perspective: 800px;
+         这个效果出不来 ？*/
+
+         .container{
+            perspective: 20em;
+         }
+
+        .container>div{
+            display: block;
+            height: 6rem;
+            font-size: 6rem;
+            overflow: hidden;
+            
+        }
+        /*rem全称font size of the root element （根元素的字体大小）
+        是CSS3中新增加的一个尺寸（度量）单位，
+        根节点（html）的font-size决定了rem的尺寸，
+        也就是说它是一个相对单位，相对于(html)。 */
+        /* overflow设置为hidden，超出4rem的文字会被隐藏 */
+
+        .container>div>span{
+            display: block;
+            height: 6rem;
+            font-weight: bold;
+            letter-spacing: -.1rem;
+            /* 缩小一点字符间距 */
+            text-align: center;
+            transition: .2s transform ease-in-out;
+            /* 动画的过渡效果 */
+            line-height: 6.3rem;
+            /* 使字体更垂直居中 */
+        }
+            /* css font baseline */
+            /* font-size和其视觉高度的关系 line-height/vertical-align/baseline*/
+
+        .container>div>.cls2{
+            font-size: 4.5rem;
+        }
+
+
+        .container:hover>div>span{
+            transform: translateY(-100%);
+            /* 将span向上移动4rem */
+            /* 滚动效果 */
+
+        }
+        /* 游标移上去的时候，调整span的样式 */
+        
+        /* 通过:nth-child()伪类选择器为四个div增加背景颜色 */
+        .container > div:nth-child(1){
+            background-color:rgba(180, 70, 70, 0.6);
+            transform: rotatex(30deg);
+        }
+        .container > div:nth-child(2){
+            background-color:rgba(211, 134, 134, 0.6);
+            transform:translateY(-.6rem) rotatex(-30deg);
+        }
+        /* translatey和rotatex属性都要写在transform里 */
+
+        .container > div:nth-child(3){
+            background-color:rgba(180, 70, 70, 0.6);
+            transform: translatey(-1.2rem) rotatex(30deg);
+        }
+        .container > div:nth-child(4){
+            background-color:rgba(211, 134, 134, 0.6);
+            transform:translateY(-1.8rem) rotatex(-30deg);
+        }
+    </style>
+</head>
+ <html>
+     <body>
+         <div class="container">
+             <div>
+                 <span class="cls1">HAPPY</span>
+                 <span class="cls2">新</span>
+             </div>
+             <div>
+                <span class="cls1">NEW</span>
+                <span class="cls2">年</span>
+            </div>
+            <div>
+                <span class="cls1">YEAR</span>
+                <span class="cls2">快</span>
+            </div>
+            <div>
+                <span class="cls1">2022</span>
+                <span class="cls2">乐</span>
+            </div>
+         </div>
+     </body>
+ </html>

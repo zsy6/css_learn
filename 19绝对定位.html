@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            绝对定位
+        </title>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .box{
+                width: 600px;
+                border: 2px dashed blue;
+                margin: 100px auto;
+                padding-left: 40px;
+                position: fixed;
+                left: 100px;
+                top: 100px;
+            }
+            .box div{
+                width: 100px;
+                height: 100px;
+            }
+            .div1{
+                background-color: tomato;   
+            }
+            .div2{
+                background-color: thistle;
+                position: absolute;
+                left: 0px;
+            }
+            /* 绝对定位是相对于“祖先定位元素”进行定位 */
+            /* 祖先定位元素可以是固定、相对、绝对 */
+            /* 会去查找其父元素是否设置了定位属性，如果有，会相对其父元素进行定位，否则再去寻找上一级元素 */
+            /* 如果其祖先元素都没有设置定位属性，它会相对于“浏览器窗口”进行定位 */
+            /* 按最近的祖先元素设置 */
+            /* 1 绝对定位元素脱离了标准文档流 */
+            /* 2 绝对定位元素不再占用空间 */
+            /* 3 会压盖住标准文档流的元素 */
+
+            
+            .div3{
+                background-color: violet;
+            }
+            
+
+        </style>
+
+    </head>
+    <body>
+        <div class="box">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div3"></div>
+        </div>
+    </body>
+</html>
