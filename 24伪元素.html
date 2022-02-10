@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            伪元素
+        </title>
+        <style type="text/css">
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            .box{
+                width: 200px;
+                height: 200px;
+                border: 2px dashed blue;
+                margin: auto;
+            }
+            /* E:first-letter  匹配当前元素中的第一个字 */
+            /* E:first-line  当前元素中的第一行 */
+            .box:first-letter{
+                font-size: 36px;
+            }
+            .box:first-line{
+                color: cadetblue;
+            }
+            /* E::before  要在当前元素的最前面插入文字，必须将文字放在content中 */
+            /* E::after 要在当前元素的最后面插入文字，必须将文字放在content中 */
+            /* 同时也可以设置样式 */
+            .box::before{
+                content: "在前面插入内容";
+            }
+            .box::after{
+                content: "在后面插入内容";
+                color: chartreuse;
+            }
+
+
+
+        </style>
+
+    </head>
+    <body>
+        <div class="box">
+            这个是一句话的内容,说完这句话就会换行
+
+        </div>
+    </body>
+</html>
