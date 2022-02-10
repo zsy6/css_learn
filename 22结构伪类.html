@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            css3结构伪类
+        </title>
+        <style type="text/css">
+            /* 结构伪类：伪类选择器 */
+            /* E:first-child  第一个孩子*/
+            /* E:last-child 最后一个孩子 */
+            /* E:nth-child(n) 匹配第n个孩子 */
+            /* E:nth-child(2n)  E:nth-child(even) 匹配偶数的孩子 */
+            /* E:nth-child(2n+1)  E:nth-child(odd) 匹配奇数的孩子 */
+            /* E:only-child  匹配有且只有一个的孩子 */
+
+            .box ul li:first-child{
+                color: aqua;
+            }
+            .box ul li:nth-child(4){
+                color: skyblue;
+            }
+            .box ul li:only-child{
+                color: pink;
+            }
+            
+
+        </style>
+
+    </head>
+    <body>
+        <div class="box">
+            <ul>
+                <li>li1</li>
+                <li>li2</li>
+                <li>li3</li>
+                <li>li4</li>
+                <li>li5</li>
+                <li>li6</li>
+                <li>li7</li>
+                <li>li8</li>
+                <li>li9</li>
+                <li>li10</li>
+            </ul>
+            <div class="box">
+                <ul>
+                    <li>有且只有一个</li>
+            </div>
+        </div>
+
+
+    </body>
+</html>
